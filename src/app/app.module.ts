@@ -12,6 +12,7 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { WorkersComponent } from './pages/workers/workers.component';
 import { WorkerComponent } from './pages/worker/worker.component';
 import { GlobalVariable } from './shared/globals';
+import { IncreaseComponent } from './pages/increase/increase.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GlobalVariable } from './shared/globals';
     HeaderComponent,
     SidebarComponent,
     WorkersComponent,
-    WorkerComponent
+    WorkerComponent,
+    IncreaseComponent
   ],
   imports: [
     BrowserModule,

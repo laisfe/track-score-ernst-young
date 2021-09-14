@@ -1,0 +1,18 @@
+@import "../../shared/scss/main-content.scss";
+@import "../../shared/scss/workers.component.scss";
+
+.workers {
+  &__money-symbol {
+    width: 37px;
+    transform: translateY(80%);
+  }
+
+  &__value-increased {
+    color: #1e9000;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -17,4 +17,11 @@
       <label class="sidebar-content__description" for="">Funcionários</label>
     </a>
   </section>
+
+  <section class="sidebar-content__section-division" [ngClass]="{ increase: routeReturn() === '/increase' }">
+    <a href="/increase">
+      <img class="sidebar-content__icon" src="../../../assets/svg/coin.svg" alt="Ícone increase" />
+      <label class="sidebar-content__description" for="">Aumentos</label>
+    </a>
+  </section>
 </nav>
