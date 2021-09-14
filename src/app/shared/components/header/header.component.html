@@ -12,4 +12,5 @@
     </li>
   </ul>
 </div>
-<h1 class="subtitle">{{subtitle}}</h1>
+<h1 *ngIf="subtitle" class="subtitle">{{subtitle}}</h1>
+<button class="button-excel" *ngIf="showButton === true">Exportar p/ Excel</button>

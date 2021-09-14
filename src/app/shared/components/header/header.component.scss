@@ -40,3 +40,21 @@
   font-weight: bold;
   padding-bottom: 15px;
 }
+
+.button-excel {
+  width: 156px;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: $orange-track-score;
+  font-weight: bold;
+  border: 3px solid $orange-track-score;
+  border-radius: 10px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.button-excel:hover {
+  background-color: $orange-track-score;
+  color: #ffffff;
+}

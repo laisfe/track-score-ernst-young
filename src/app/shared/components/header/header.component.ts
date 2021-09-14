@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
+  @Input() showButton: boolean = false;
 
   constructor(
     // public authenticationService: AuthenticationService
     private router: Router
-  ) {}
+  ) { }
 
   logout(): void {
     // this.authenticationService.SignOut();
