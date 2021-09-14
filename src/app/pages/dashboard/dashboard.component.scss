@@ -6,7 +6,6 @@
   border: 1px solid $gray-background;
   border-radius: 15px;
   background-color: $gray-background;
-  // &__money {
   &__description {
     display: block;
     font-weight: bold;
@@ -45,7 +44,6 @@
     background-color: $orange-track-score;
     color: #ffffff;
   }
-  // }
 }
 
 .align-center {

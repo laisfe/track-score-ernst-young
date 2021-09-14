@@ -10,4 +10,11 @@
       <label class="sidebar-content__description" for="">Dashboard</label>
     </a>
   </section>
+
+  <section class="sidebar-content__section-division" [ngClass]="{ workers: routeReturn() === '/workers' }">
+    <a href="/workers">
+      <img class="sidebar-content__icon" src="../../../assets/svg/people.svg" alt="Ícone workers" />
+      <label class="sidebar-content__description" for="">Funcionários</label>
+    </a>
+  </section>
 </nav>
