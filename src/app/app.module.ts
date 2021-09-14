@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SideImageComponent } from './shared/components/side-image/side-image.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SideImageComponent
+    SideImageComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
