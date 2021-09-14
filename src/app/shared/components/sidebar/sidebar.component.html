@@ -1,0 +1,13 @@
+<nav class="sidebar-content nav flex-column">
+  <section class="sidebar-content__header">
+    <img class="sidebar-content__header__icon" src="../../../assets/svg/EY_logo_2019.svg" alt="Logo Estudeme" />
+    <span class="sidebar-content__header__title">TrackScore</span>
+  </section>
+
+  <section class="sidebar-content__section-division" [ngClass]="{ dashboard: routeReturn() === '/dashboard' }">
+    <a href="/dashboard">
+      <img class="sidebar-content__icon" src="../../../assets/svg/house-door.svg" alt="Ícone dashboard" />
+      <label class="sidebar-content__description" for="">Dashboard</label>
+    </a>
+  </section>
+</nav>
