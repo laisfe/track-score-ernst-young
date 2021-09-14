@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   @Input() title: string = '';
+  @Input() subtitle: string = '';
 
   constructor(
     // public authenticationService: AuthenticationService

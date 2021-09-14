@@ -4,9 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 15px;
 
-  & h1 {
+  & .title {
     color: $gray-texts;
     font-size: 35px;
     font-family: "Ubuntu", sans-serif;
@@ -32,4 +31,12 @@
   &__icon {
     width: 35px;
   }
+}
+
+.subtitle {
+  color: $orange-track-score;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  padding-bottom: 15px;
 }

@@ -10,6 +10,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { WorkersComponent } from './pages/workers/workers.component';
+import { WorkerComponent } from './pages/worker/worker.component';
+import { GlobalVariable } from './shared/globals';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,16 @@ import { WorkersComponent } from './pages/workers/workers.component';
     DashboardComponent,
     HeaderComponent,
     SidebarComponent,
-    WorkersComponent
+    WorkersComponent,
+    WorkerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GlobalVariable
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

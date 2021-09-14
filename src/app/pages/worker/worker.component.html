@@ -1,0 +1,48 @@
+<app-sidebar [route]="'/workers'"></app-sidebar>
+
+<div class="main-content with-subtitle">
+  <div class="row">
+    <div class="col-md-12">
+      <app-header [title]="'Funcionários'" [subtitle]="'Budget disponível: R$10.000,00'"></app-header>
+      <div class="container">
+        <section class="worker-info">
+          <img class="worker-info__image" src="../../../assets/img/{{ workerName }}{{
+              '.jpg'
+            }}" alt="Imagem alunos" />
+          <h4 class="worker-info__name">
+            {{ globalVariable?.workerNameGlobal }}
+          </h4>
+        </section>
+        <section class="worker-info">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="worker-info__data">Cargo: Analista TI Sênior</p>
+              <p class="worker-info__data">Pontuação: 95</p>
+              <p class="worker-info__data">Tempo de empresa: 5 anos</p>
+              <span class="worker-info__data">Salário atual: R$7.000,00</span>
+              <img class="worker-info__refresh" src="../../../assets/svg/arrow-repeat.svg" alt="Refresh icon">
+            </div>
+            <div class="col-md-6 skills-data">
+              <p class="worker-info__data">Hot Skills</p>
+              <ul>
+                <li>Conhecimento em Javascript</li>
+                <li>Conhecimento em Typescript</li>
+                <li>Conhecimento em Angular</li>
+                <li>Conhecimento em Node</li>
+                <li>Conhecimento em testes unitários</li>
+                <li>Inglês avançado</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="input-footer">
+          <span class="input-footer__data">Aumento a ser disponibilizado</span>
+          <input class="input-footer__money-value" type="number" min="1" step="any" placeholder="R$" required />
+          <button class="input-footer__button btn btn-primary" type="submit" (click)="''">
+            Enviar valor
+          </button>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

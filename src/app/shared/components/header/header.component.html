@@ -1,25 +1,15 @@
 <div class="header">
-  <h1>{{title}}</h1>
+  <h1 class="title">{{title}}</h1>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item dropdown">
-      <a
-        class="nav-link dropdown-toggle"
-        id="navbarDropdown"
-        role="button"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-        href=""
-      >
-        <img
-          class="header__icon"
-          src="../../../../assets/svg/person-circle.svg"
-          alt="Ícone pessoas"
-        />
+      <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" href="">
+        <img class="header__icon" src="../../../../assets/svg/person-circle.svg" alt="Ícone pessoas" />
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item"  (click)="logout()">Sair</a>
+        <a class="dropdown-item" (click)="logout()">Sair</a>
       </div>
     </li>
   </ul>
 </div>
+<h1 class="subtitle">{{subtitle}}</h1>

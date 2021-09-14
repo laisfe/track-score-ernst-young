@@ -29,3 +29,9 @@
     padding: 35px;
   }
 }
+
+.with-subtitle {
+  .container {
+    height: calc(100% - 90px);
+  }
+}

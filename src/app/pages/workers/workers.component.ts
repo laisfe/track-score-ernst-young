@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalVariable } from 'src/app/shared/globals';
 
 @Component({
   selector: 'app-workers',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkersComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public globalVariable: GlobalVariable
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  teste(workerName: string): void {
+    this.globalVariable.workerNameGlobal = workerName;
   }
 
 }
