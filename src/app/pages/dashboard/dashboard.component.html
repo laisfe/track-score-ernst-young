@@ -5,7 +5,30 @@
     <div class="col-md-12">
       <app-header [title]="'Dashboard'"></app-header>
       <div class="container">
-
+        <div class="row">
+          <div class="col-md-6">
+            <section class="dash-content">
+              <p class="dash-content__description">Disponível para sua área</p>
+              <p class="dash-content__value">R$10.000</p>
+              <!-- </section> -->
+              <!-- <section class="dash-content__workers"> -->
+              <p class="dash-content__description">Quantidade de funcionários</p>
+              <p class="dash-content__value">10</p>
+            </section>
+          </div>
+          <div class="col-md-6">
+            <section class="dash-content align-center">
+              <p class="dash-content__description">Funcionários disponíveis para avaliação</p>
+              <img src="../../../assets/img/gaara.jpg" alt="Gaara">
+              <img src="../../../assets/img/kakashi.jpg" alt="Kakashi">
+              <img src="../../../assets/img/naruto.jpg" alt="Naruto">
+              <img src="../../../assets/img/rocklee.jpg" alt="Rock Lee">
+              <button class="dash-content__button btn btn-primary" type="submit" (click)="''">
+                Ver mais
+              </button>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   </div>
