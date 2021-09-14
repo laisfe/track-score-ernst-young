@@ -1,0 +1,37 @@
+<app-sidebar [route]="'/settings'"></app-sidebar>
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <app-header [title]="'Configurações'"></app-header>
+      <div class="container">
+        <section class="data-change">
+          <p class="data-change__data">Alterar e-mail cadastrado</p>
+          <p class="data-change__data-subtitle">E-mail atual</p>
+          <input class="data-change__input-value" type="text" min="1" step="any" placeholder="E-mail" required />
+          <button class="data-change__button btn btn-primary" type="submit" (click)="''">
+            Solicitar verificação
+          </button>
+          <p class="data-change__data-subtitle">Novo e-mail</p>
+          <input class="data-change__input-value" type="text" min="1" step="any" placeholder="E-mail" required />
+          <button class="data-change__button btn btn-primary" type="submit" (click)="''" disabled>
+            Solicitar alteração
+          </button>
+        </section>
+        <section class="data-change">
+          <p class="data-change__data">Alterar senha cadastrado</p>
+          <p class="data-change__data-subtitle">Senha atual</p>
+          <input class="data-change__input-value" type="text" min="1" step="any" placeholder="E-mail" required />
+          <button class="data-change__button btn btn-primary" type="submit" (click)="''">
+            Solicitar verificação
+          </button>
+          <p class="data-change__data-subtitle">Nova senha</p>
+          <input class="data-change__input-value" type="text" min="1" step="any" placeholder="E-mail" required />
+          <button class="data-change__button btn btn-primary" type="submit" (click)="''" disabled>
+            Solicitar alteração
+          </button>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+@import "../../shared/scss/main-content.scss";
+
+.data-change {
+  padding-bottom: 50px;
+
+  &__data {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    color: $gray-texts;
+    padding-right: 10px;
+  }
+
+  &__data-subtitle {
+    font-weight: bold;
+    font-size: 13px;
+    padding-bottom: 10px;
+    font-family: "Ubuntu", sans-serif;
+    color: $gray-texts;
+    padding-right: 10px;
+  }
+
+  &__input-value {
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    margin-bottom: 16px;
+
+  }
+
+  &__button,
+  &__button:disabled:hover {
+    width: 164px;
+    background-color: #ffffff;
+    color: $orange-track-score;
+    font-weight: bold;
+    border: 3px solid $orange-track-score;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 2px;
+  }
+
+  &__button:hover {
+    background-color: $orange-track-score;
+    color: #ffffff;
+  }
+}

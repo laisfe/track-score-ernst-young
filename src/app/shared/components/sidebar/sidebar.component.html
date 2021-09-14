@@ -11,7 +11,7 @@
     </a>
   </section>
 
-  <section class="sidebar-content__section-division" [ngClass]="{ workers: routeReturn() === '/workers' }">
+  <section class="sidebar-content__section-division" [ngClass]="{ workers: routeReturn() === '/workers' || routeReturn() === '/worker' }">
     <a href="/workers">
       <img class="sidebar-content__icon" src="../../../assets/svg/people.svg" alt="Ícone workers" />
       <label class="sidebar-content__description" for="">Funcionários</label>
@@ -22,6 +22,13 @@
     <a href="/increase">
       <img class="sidebar-content__icon" src="../../../assets/svg/coin.svg" alt="Ícone increase" />
       <label class="sidebar-content__description" for="">Aumentos</label>
+    </a>
+  </section>
+
+  <section class="sidebar-content__section-division" [ngClass]="{ settings: routeReturn() === '/settings' }">
+    <a href="/settings">
+      <img class="sidebar-content__icon" src="../../../assets/svg/gear.svg" alt="Ícone settings" />
+      <label class="sidebar-content__description" for="">Configurações</label>
     </a>
   </section>
 </nav>
