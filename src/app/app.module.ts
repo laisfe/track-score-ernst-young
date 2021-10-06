@@ -14,6 +14,12 @@ import { WorkerComponent } from './pages/worker/worker.component';
 import { GlobalVariable } from './shared/globals';
 import { IncreaseComponent } from './pages/increase/increase.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +37,14 @@ import { SettingsComponent } from './pages/settings/settings.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    FormsModule
+  ],
+  exports:[
+    AngularFirestoreModule
   ],
   providers: [
     GlobalVariable

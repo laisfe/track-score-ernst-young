@@ -2,17 +2,41 @@
   <div class="col-md-6">
     <section class="centralize-content">
       <section class="head-login">
-        <img class="head-login__logo" src="../../../assets/svg/EY_logo_2019.svg" alt="Logo Ernst Young" />
+        <img
+          class="head-login__logo"
+          src="../../../assets/svg/EY_logo_2019.svg"
+          alt="Logo Ernst Young"
+        />
         <span class="head-login__title">TrackScore</span>
       </section>
       <!-- <form action=""> -->
       <div class="login form-group">
-        <input class="login__input-label form-control" type="email" placeholder="E-mail" required />
-        <input class="login__input-label form-control" type="password" placeholder="Senha" required />
-        <button class="login__login-button btn btn-primary" type="submit" (click)="goToDashboardPage()">
+        <input
+          class="login__input-label form-control"
+          type="email"
+          placeholder="E-mail"
+          [(ngModel)]="email"
+          required
+        />
+        <input
+          class="login__input-label form-control"
+          type="password"
+          placeholder="Senha"
+          [(ngModel)]="password"
+          required
+        />
+        <button
+          class="login__login-button btn btn-primary"
+          type="submit"
+          (click)="signIn()"
+        >
           Login
         </button>
-        <button class="login__login-button btn btn-primary" type="submit" (click)="goToSignUpPage()">
+        <button
+          class="login__login-button btn btn-primary"
+          type="submit"
+          (click)="goToSignUpPage()"
+        >
           Cadastrar-se
         </button>
       </div>
