@@ -19,7 +19,13 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
+import { ngxLoadingAnimationTypes, NgxLoadingModule } from 'ngx-loading';
+import { HttpClientModule } from '@angular/common/http';
+import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -33,7 +39,7 @@ import { FormsModule } from '@angular/forms';
     WorkersComponent,
     WorkerComponent,
     IncreaseComponent,
-    SettingsComponent
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,14 +47,30 @@ import { FormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.circle,
+      backdropBackgroundColour: 'rgba(0,0,0,0.1)',
+      primaryColour: '#ffab39',
+      secondaryColour: '#5de26866',
+    }),
+    HttpClientModule,
   ],
-  exports:[
-    AngularFirestoreModule
-  ],
+  exports: [AngularFirestoreModule],
   providers: [
-    GlobalVariable
+    GlobalVariable,
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt',
+    },
+
+    /* if you don't provide the currency symbol in the pipe, 
+  this is going to be the default symbol (R$) ... */
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL',
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

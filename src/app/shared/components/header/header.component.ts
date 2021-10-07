@@ -1,7 +1,6 @@
-import { Component, Inject, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
 import * as XLSX from 'xlsx';
-// import { AuthenticationService } from '../../authentication/authentication.service';
+import { AuthenticationService } from '../../authentication/authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -17,13 +16,11 @@ export class HeaderComponent {
   fileName = 'ExcelSheet.xlsx';
 
   constructor(
-    // public authenticationService: AuthenticationService
-    private router: Router
+    public authenticationService: AuthenticationService,
   ) {}
 
   logout(): void {
-    // this.authenticationService.SignOut();
-    this.router.navigate(['/']);
+    this.authenticationService.SignOut();
   }
 
   export(idTable: string): void {

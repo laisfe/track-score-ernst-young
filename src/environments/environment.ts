@@ -5,14 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyC6Jm8xjQpeaY5OxvEKufh3ek5Ag3UbBpU",
-    authDomain: "track-score.firebaseapp.com",
-    projectId: "track-score",
-    storageBucket: "track-score.appspot.com",
-    messagingSenderId: "697092524290",
-    appId: "1:697092524290:web:0f880319fc7ae41cb1da1b",
-    measurementId: "G-JXLGQJ7RF2"
+    apiKey: 'AIzaSyC6Jm8xjQpeaY5OxvEKufh3ek5Ag3UbBpU',
+    authDomain: 'track-score.firebaseapp.com',
+    projectId: 'track-score',
+    storageBucket: 'track-score.appspot.com',
+    messagingSenderId: '697092524290',
+    appId: '1:697092524290:web:0f880319fc7ae41cb1da1b',
+    measurementId: 'G-JXLGQJ7RF2',
   },
+  SERVER_URL: 'https://private-0a577b-laisfernandes.apiary-mock.com',
 };
 
 /*

@@ -12,6 +12,10 @@
     font-size: 20px;
     font-family: "Ubuntu", sans-serif;
     padding-bottom: 10px;
+
+    &__no-item {
+      font-size: 15px;
+    }
   }
 
   &__value {
