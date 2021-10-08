@@ -5,49 +5,30 @@
     <div class="col-md-12">
       <app-header [title]="'Funcionários'"></app-header>
       <div class="container">
-        <div class="scroll-table">
+        <div class="scroll-table" *ngIf="!loading">
           <table class="workers table">
             <tbody>
-              <a [routerLink]="'/worker'" (click)="teste('naruto')">
-                <tr class="workers__profile-row">
-                  <td>
-                    <img class="workers__profile-image" src="../../../assets/img/naruto.jpg" alt="Naruto" />
-                  </td>
-                  <td class="workers__profile-name">Naruto Uzumaki</td>
-                  <td class="workers__profile-name">Analista TI Senior</td>
-                  <td class="workers__profile-name">85</td>
-                </tr>
-              </a>
-              <a [routerLink]="'/worker'" (click)="teste('kakashi')">
-                <tr class="workers__profile-row">
-                  <td>
-                    <img class="workers__profile-image" src="../../../assets/img/kakashi.jpg" alt="Kakashi" />
-                  </td>
-                  <td class="workers__profile-name">Kakashi Hatake</td>
-                  <td class="workers__profile-name">Analista TI Senior</td>
-                  <td class="workers__profile-name">95</td>
-                </tr>
-              </a>
-              <a [routerLink]="'/worker'" (click)="teste('gaara')">
-                <tr class="workers__profile-row">
-                  <td>
-                    <img class="workers__profile-image" src="../../../assets/img/gaara.jpg" alt="Gaara" />
-                  </td>
-                  <td class="workers__profile-name">Gaara</td>
-                  <td class="workers__profile-name">Analista TI Pleno</td>
-                  <td class="workers__profile-name">90</td>
-                </tr>
-              </a>
-              <a [routerLink]="'/worker'" (click)="teste('rocklee')">
-                <tr class="workers__profile-row">
-                  <td>
-                    <img class="workers__profile-image" src="../../../assets/img/rocklee.jpg" alt="Rock Lee" />
-                  </td>
-                  <td class="workers__profile-name">Rock Lee</td>
-                  <td class="workers__profile-name">Analista TI Pleno</td>
-                  <td class="workers__profile-name">94</td>
-                </tr>
-              </a>
+              <div *ngFor="let employees of employeesList">
+                <a [routerLink]="'/worker'" (click)="values(employees, employeesData.available_budget)">
+                  <tr class="workers__profile-row">
+                    <td>
+                      <img
+                        class="workers__profile-image"
+                        src="../../../assets/svg/person-square.svg"
+                        alt="Naruto"
+                      />
+                    </td>
+                    <td class="workers__profile-name">{{ employees.nome }}</td>
+                    <td class="workers__profile-name">{{ employees.cargo }}</td>
+                    <td class="workers__profile-name">
+                      {{ employees.actual_lead }}
+                    </td>
+                    <td class="workers__profile-name">
+                      {{ employees.salary | currency: "R$" }}
+                    </td>
+                  </tr>
+                </a>
+              </div>
             </tbody>
           </table>
         </div>
@@ -55,3 +36,5 @@
     </div>
   </div>
 </div>
+
+<ngx-loading [show]="loading"></ngx-loading>

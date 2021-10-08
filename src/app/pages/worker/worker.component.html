@@ -3,42 +3,71 @@
 <div class="main-content with-subtitle">
   <div class="row">
     <div class="col-md-12">
-      <app-header [title]="'Funcionários'" [subtitle]="'Budget disponível: R$10.000,00'"></app-header>
+      <app-header
+        [title]="'Funcionários'"
+        [subtitle]="'Budget disponível: ' + (availableBudget | currency: 'R$')"
+      ></app-header>
       <div class="container">
         <section class="worker-info">
-          <img class="worker-info__image" src="../../../assets/img/{{ workerName }}{{
-              '.jpg'
-            }}" alt="Imagem alunos" />
+          <img
+            class="worker-info__image"
+            src="../../../assets/svg/person-square.svg"
+            alt="Imagem alunos"
+          />
           <h4 class="worker-info__name">
-            {{ globalVariable?.workerNameGlobal }}
+            {{ workerName ? workerName : "-" }}
           </h4>
         </section>
         <section class="worker-info">
           <div class="row">
             <div class="col-md-6">
-              <p class="worker-info__data">Cargo: Analista TI Sênior</p>
-              <p class="worker-info__data">Pontuação: 95</p>
-              <p class="worker-info__data">Tempo de empresa: 5 anos</p>
-              <span class="worker-info__data">Salário atual: R$7.000,00</span>
-              <img class="worker-info__refresh" src="../../../assets/svg/arrow-repeat.svg" alt="Refresh icon">
+              <p class="worker-info__data">
+                Cargo: {{ workerFunction ? workerFunction : "-" }}
+              </p>
+              <p class="worker-info__data">
+                Actual Lead:
+                {{ workerActualLead ? workerActualLead : workerActualLead }}
+              </p>
+              <p class="worker-info__data">
+                Tempo de empresa:
+                {{ workerCompanyTime ? workerCompanyTime : "-" }}
+              </p>
+              <span class="worker-info__data"
+                >Salário atual:
+                {{ workerSalary ? (workerSalary | currency: "R$") : "-" }}</span
+              >
+              <img
+                class="worker-info__refresh"
+                src="../../../assets/svg/arrow-repeat.svg"
+                alt="Refresh icon"
+              />
             </div>
             <div class="col-md-6 skills-data">
               <p class="worker-info__data">Hot Skills</p>
               <ul>
-                <li>Conhecimento em Javascript</li>
-                <li>Conhecimento em Typescript</li>
-                <li>Conhecimento em Angular</li>
-                <li>Conhecimento em Node</li>
-                <li>Conhecimento em testes unitários</li>
-                <li>Inglês avançado</li>
+                <li *ngFor="let hotskilss of workerHotSkills">
+                  {{ hotskilss }}
+                </li>
               </ul>
             </div>
           </div>
         </section>
         <section class="input-footer">
           <span class="input-footer__data">Aumento a ser disponibilizado</span>
-          <input class="input-footer__money-value" type="number" min="1" step="any" placeholder="R$" required />
-          <button class="input-footer__button btn btn-primary" type="submit" (click)="''">
+          <input
+            class="input-footer__money-value"
+            type="number"
+            min="1"
+            step="any"
+            placeholder="R$"
+            [(ngModel)]="increaseValue"
+            required
+          />
+          <button
+            class="input-footer__button btn btn-primary"
+            type="submit"
+            (click)="alterBudget()"
+          >
             Enviar valor
           </button>
         </section>

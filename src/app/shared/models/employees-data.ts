@@ -12,4 +12,5 @@ export interface EmployeesList {
   actual_lead: string;
   company_time: string;
   hot_skills: [];
+  salary: number;
 }
